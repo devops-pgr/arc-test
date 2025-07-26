@@ -5,10 +5,7 @@ on: [push]
 
 jobs:
   test:
-    runs-on: 
-      - self-hosted
-      - pgr-devops-k8s-runner
-      - arc-runner-set 
+    runs-on: arc-runner-set 
       
     steps:
       - run: echo "✅ Running on GitHub Org-level Kubernetes Runner! test2"
