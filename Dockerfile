@@ -1,14 +1,11 @@
-# Use official Python base image
 FROM python:3.11-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy files
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt -i https://pypi.org/simple
 
 COPY . .
 
-# Start the app
 CMD ["python", "app.py"]
