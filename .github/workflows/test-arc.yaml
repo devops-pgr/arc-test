@@ -1,0 +1,10 @@
+# .github/workflows/test-org-runner.yml
+name: Test Org Runner
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - run: echo "✅ Running on GitHub Org-level Kubernetes Runner!"
