@@ -31,5 +31,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: true
+          push: false # Set to true if you want to push the image to DockerHub
           tags: your-dockerhub-username/your-image-name:latest
