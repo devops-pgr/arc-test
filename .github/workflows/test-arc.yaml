@@ -17,3 +17,4 @@ jobs:
           docker info
           docker build -t local-image:test .
           docker run --rm local-image:test
+#
